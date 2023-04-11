@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/iconh.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Seu Signo</title>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img/iconerodape.png" alt="logo-pic" class="img-header">
+                <h1>Seu signo</h1>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/suedduarte?tab=repositories" class="nav-link">+Projetos</a>
+                    </li>
+            </div>
+
+            <div class="contato-button">
+                <button><a href="https://www.linkedin.com/in/sued-duarte-4111a3270">Contato</a></button>
+            </div>
+        </nav>
+    </header>
+
+<main>     
+    <h1>
+        Quer saber mais sobre o seu signo? 
+    </h1>
+<br>
+ 
+    <div class="textInputWrapper">    
+        <input type="text" id="signos" name="text" class="input" placeholder="Digite seu signo aqui...." >
+    </div>
+    
+    <button onclick="escolhaSigno()"><span>Buscar</span></button>
+<br>
+    <div id="frase"></div>
+
+    <div id="img">
+        <img src="img/iconh.png" alt="" id="imagem" >
+    </div>
+</main>
+  
+    <script>
+        function escolhaSigno(){
+            var texto 
+            var signo = document.getElementById('signos').value;
+            var img = document.getElementById('imagem');
+
+            switch(signo){
+                case 'Áries':
+                    texto = "Os mais estressadinho do zodíaco, os arianos são impulsivos, determinados e nada pacientes.";
+                    img.src = 'img/aries.png'
+                break; //pra avisar o comando que o caso acabou.
+
+                case 'Touro':
+                    texto = "Tão calmos e apegados, mas pisa no calo deles para ver o que acontece. Não vamos esquecer da fome sem fim que eles têm!";
+                    img.src = 'img/touro.png'
+                break;
+                
+                case 'Gêmeos':
+                    texto = "Donos da razão e falantes, com essa junção não dá nem para tentar discutir com eles.";
+                    img.src = 'img/gemeos.png'
+                break;
+                
+                
+
+                case 'Câncer':
+                    texto = "São pessoas dóceis, gentis, românticos e carinhosos, são pessoas que se preocupam profundamente com seus amigos, família e lar.";
+                    img.src = 'img/cancer.png'
+                break;
+                
+                case 'Leão':
+                    texto = "São pessoas que se sentem responsáveis pelas pessoas que estão ao seu redor e defende-as como um verdadeiro leão.";
+                    img.src = 'img/leao.png'
+                break 
+                
+                case 'Virgem':
+                    texto = "São pessoas que se sentem responsáveis pelas pessoas que estão ao seu redor e defende-as como um verdadeiro leão.";
+                    img.src = 'img/virgem.png'
+                break;
+
+                case 'Libra':
+                    texto = "São considerados os mais luxuosos e elegantes do zodíaco. Para eles, é como se a vida fosse uma bela e sofisticada obra de arte.";
+                    img.src = 'img/libra.png'
+                break;    
+
+                case 'Escorpião':
+                    texto = "São pessoas que exalam mistério e poder, e dificilmente deixam-se acessar por completo.";
+                    img.src = 'img/escorpiao.png'
+                break;
+                
+                case 'Sagitário':
+                    texto = "São pessoas que estão sempre abertas a novas experiências e querendo aprender. Mente aberta e intuitiva, possuem uma personalidade inquieta e mutável";
+                    img.src = 'img/sagitario.png'
+                break;
+                
+                case 'Capricórnio':
+                    texto = "São pessoas práticas, autoconfiantes e ambiciosos, o signo de Capricórnio, em especial, ama progredir na vida e sabem fazer isso muito bem.";
+                    img.src = 'img/capricornio.png'
+                break;
+
+                case 'Aquário':
+                    texto = "São pessoas realistas, determinados, disciplinados, organizados e estão sempre em busca de um lugar no mundo";
+                    img.src = 'img/aquario.png'
+                break;
+
+                case 'Peixes':
+                    texto = "São pessoas sensíveis, sonhadoras, empáticas, pacientes, calmas, intuitivas, românticas, generosas, místicas e amáveis.";
+                    img.src = 'img/peixes.png'
+                break;
+
+                 default:
+                    texto = "Insira um signo existente";   
+                    img.src = 'img/erro.png'
+            }
+
+            document.getElementById('frase').innerHTML = texto 
+        }
+    </script>
+
+<footer>
+    <div id="footer_content">
+        <div id="footer_contacts">
+            <img src="img/iconerodape.png" alt="logo" class="img-footer">
+            <p>Sued Duarte - Web Developer</p>
+
+            <div id="footer_social_media">
+                <a href="https://instagram.com/sued_duarte" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:suedduarte57@gmail.com" class="footer-link" id="email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/sued-duarte-4111a3270" class="footer-link" id="linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/suedduarte" class="footer-link" id="github">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <ul class="footer-list">
+            <li>
+                <h3>+Projetos</h3>
+            </li>
+            <li>
+                <a href="https://suedduarte.github.io/Carrossel3D/" class="footer-link">Carrossel 3D</a>
+            </li>
+
+            <li>
+                <a href="https://suedduarte.github.io/parallax-duart-s-resenha/" class="footer-link">Parallax</a>
+            </li>
+
+            <li>
+                <a href="https://suedduarte.github.io/hotsite-cres-a-com-o-ios/" class="footer-link">Hotsite</a>
+            </li>
+        </ul>
+
+        <ul class="footer-list">
+            <li>
+                <h3>JavaScript</h3>
+            </li>
+            <li>
+                <a href="https://suedduarte.github.io/clockjs/" class="footer-link">Relógio</a>
+            </li>
+
+            <li>
+                <a href="https://suedduarte.github.io/calculator/" class="footer-link">Calculadora</a>
+            </li>
+
+            <li>
+                <a href="https://suedduarte.github.io/soma-dom/" class="footer-link">Somador</a>
+            </li>
+        </ul>
+
+        <div id="footer_subscribe">
+            <h3>Sobre este site:</h3>
+
+            <p>
+                SwitchCase - Horóscopo feito com HTML, CSS e Java Script.
+            </p>
+
+          
+        </div>
+    </div>
+
+    <div id="footer_copyright">
+        &#169
+        2023 Sued Duarte
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
